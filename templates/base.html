@@ -1,91 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!--    bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <!--    css- 추후 별도 분리-->
     <style>
         body {
-            background-color: silver;
+            background-color: rgb(44, 62, 82);
         }
 
         .navbar {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(37, 204, 160);
         }
 
-        .nav-link, .navbar-logo {
-            color:black;
+        .nav-link,
+        .navbar-logo, a {
+            color: black;
         }
 
-        .nav-footer {
-            position:absolute;
-            bottom:0;
-            width:100%;
-            height:70px;
-            background-color:rgba(0, 0, 0, 0.5);
+        footer {
+            margin-top: 20px;
         }
 
+        .contact {
+            text-align: center;
+        }
+
+        i {
+            margin-right: 30px;
+        }
+
+        
     </style>
 
 
     <title>P.rogramming 홈페이지!</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
             <a class="navbar-logo" href="#">
-                <img src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/p960x960/75332821_2462692640645362_6889331996112191488_o.jpg?_nc_cat=103&_nc_ohc=6CDVuxBADCsAX8HRc5b&_nc_ht=scontent-ssn1-1.xx&_nc_tp=6&oh=97d0d42ab1e6658a115e06e2ac15f0f2&oe=5E91A851" width="30" height="30" alt="">
+                <img src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/p960x960/75332821_2462692640645362_6889331996112191488_o.jpg?_nc_cat=103&_nc_ohc=6CDVuxBADCsAX8HRc5b&_nc_ht=scontent-ssn1-1.xx&_nc_tp=6&oh=97d0d42ab1e6658a115e06e2ac15f0f2&oe=5E91A851"
+                    width="30" height="30" alt="">
             </a>
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>   
+                    <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Schedule</a>   
+                    <a class="nav-link" href="#">Activitiy</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Activitiy</a>   
+                    <a class="nav-link" href="#">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>   
+                    <a class="nav-link" href="#">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>   
+                    <a class="nav-link" href="#">Board</a>
                 </li>
             </ul>
         </nav>
     </header>
     {% block content %}
-    
+
     <main>
-        {% include 'about.html' %} 
-        {% include 'schedule.html' %} 
+        {% include 'about.html' %}
         {% include 'activity.html' %}
         {% include 'portfolio.html' %}
     </main>
-
     {% endblock %}
     <footer>
-        <nav class="nav-footer">
-            <ul class='nav justify-content-center'>
-                <li class="footer-item">item1</li>
-                <li class="footer-item">item2</li>
-                <li class="footer-item">
-                    <i class="fas fa-phone-alt"></i>
-                </li>
-            </ul>
-        </nav>
-    <footer>
+        <div class="contact">
+
+            <a href="https://www.facebook.com/p.rogramming3k/">
+                <i class="fab fa-facebook fa-5x"></i>
+            </a>
+            <a href="">
+            <i class="fas fa-envelope fa-5x"></i>
+            </a>
+            <a href="">
+            <i class="fas fa-mobile-alt fa-5x"></i>
+            </a>
+        </div>
+        <footer class="container-fluid d-flex flex-column justify-content-center">
+            <div class="row d-flex justify-content-center">
+                &copy피로그래밍 | 회장 : 정성모
+            </div>
+            <div class="row mt-1 d-flex justify-content-center">
+                서울특별시 관악구 관악로 1, 서울대학교 벤처경영 교육 및 연구 동아리
+            </div>
+        </footer>
+        <footer>
 </body>
+
 </html>

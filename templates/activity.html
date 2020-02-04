@@ -1,1 +1,197 @@
-<p>activity.html</p>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
+    figure.snip1200 {
+        font-family: 'Raleway', Arial, sans-serif;
+        position: relative;
+        overflow: hidden;
+        margin: 10px;
+        min-width: 220px;
+        max-width: 310px;
+        max-height: 310px;
+        width: 100%;
+        background: #000000;
+        color: #ffffff;
+        text-align: center;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        font-size: 16px;
+    }
+
+    figure.snip1200 * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.45s ease-in-out;
+        transition: all 0.45s ease-in-out;
+    }
+
+    figure.snip1200 img {
+        max-width: 100%;
+        position: relative;
+        opacity: 0.9;
+    }
+
+    figure.snip1200 figcaption {
+        position: absolute;
+        top: 45%;
+        left: 7%;
+        right: 7%;
+        bottom: 45%;
+        border: 1px solid white;
+        border-width: 1px 1px 0;
+    }
+
+    figure.snip1200 .heading {
+        overflow: hidden;
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    figure.snip1200 h2 {
+        display: table;
+        margin: 0 auto;
+        padding: 0 10px;
+        position: relative;
+        text-align: center;
+        width: auto;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    figure.snip1200 h2 span {
+        font-weight: 800;
+    }
+
+    figure.snip1200 h2:before,
+    figure.snip1200 h2:after {
+        position: absolute;
+        display: block;
+        width: 1000%;
+        height: 1px;
+        content: '';
+        background: white;
+        top: 50%;
+    }
+
+    figure.snip1200 h2:before {
+        left: -1000%;
+    }
+
+    figure.snip1200 h2:after {
+        right: -1000%;
+    }
+
+    figure.snip1200 p {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        position: absolute;
+        width: 100%;
+        padding: 0 20px;
+        margin: 0;
+        opacity: 0;
+        line-height: 1.6em;
+        font-size: 0.9em;
+    }
+
+    figure.snip1200 a {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 1;
+    }
+
+    figure.snip1200:hover img,
+    figure.snip1200.hover img {
+        opacity: 0.25;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    figure.snip1200:hover figcaption,
+    figure.snip1200.hover figcaption {
+        top: 7%;
+        bottom: 7%;
+    }
+
+    figure.snip1200:hover p,
+    figure.snip1200.hover p {
+        opacity: 1;
+        -webkit-transition-delay: 0.35s;
+        transition-delay: 0.35s;
+    }
+    .activity-info {
+        color:white;
+        text-align:center;
+        padding: 30px;
+    }
+
+</style>
+<!-- 스케쥴 그래프(?) 이미지 삽입 -->
+<div class="activity">
+    <div class="activity-info">
+        <div class="row">
+            <div class="col info-content">
+            <h5>피로그래밍 활동</h5>
+            <br>
+            <p>피로그래밍은 방학기간내 8주의 기간동안 python과 django에 대해 배우고, 팀프로젝트를 합니다.</p>
+            </div>
+        </div>
+    </div>
+    <div class="activity-content">
+        <div class="row justify-content-center">
+            <div class="activity-01 col">
+                <figure class="snip1200">
+                    <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                        alt="">
+                    <figcaption>
+                        <p>HTML/CSS를 배웁니다</p>
+                        <div class="heading">
+                            <h2>week<span>01</span></h2>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="activity-02 col">
+                <figure class="snip1200">
+                    <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                        alt="">
+                    <figcaption>
+                        <p>python을 배웁니다</p>
+                        <div class="heading">
+                            <h2>week<span>02</span></h2>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="activity-03 col">
+                <figure class="snip1200">
+                    <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                        alt="">
+                    <figcaption>
+                        <p>장고를 배웁니다</p>
+                        <div class="heading">
+                            <h2>week<span>03-05</span></h2>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="activity-04 col">
+                <figure class="snip1200">
+                    <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                        alt="">
+                    <figcaption>
+                        <p>팀프로젝트를 합니다</p>
+                        <div class="heading">
+                            <h2>week<span>06-08</span></h2>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
