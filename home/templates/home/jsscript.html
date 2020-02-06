@@ -1,52 +1,37 @@
-{% extends 'base.html' %}
-{% block content %}
+<body>
 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript">
-    //<!--
-        function viewDiv(idx)
-        {
-            if(idx == 1)
-            {
-                $(".div1").css("display","");
-                $(".div2").css("display","none");
-                $(".div3").css("display","none");
-            }
-            else if(idx == 2)
-            {
-                $(".div1").css("display","none");
-                $(".div2").css("display","");
-                $(".div3").css("display","none");
-            }
-            else if(idx == 3)
-            {
-                $(".div1").css("display","none");
-                $(".div2").css("display","none");
-                $(".div3").css("display","");
-            }
-            else
-            {
-                $(".div1").css("display","");
-                $(".div2").css("display","");
-                $(".div3").css("display","");
-            }
-        }
-    //-->
-    </script>
-<div style="display:block">
-    <input type="button" value="전체보기" onclick="viewDiv()"/><br/>
-    <input type="button" value="div1 상세보기" onclick="viewDiv(1)"/><br/>
-    <div class="div1" style="width:300px;height:30px;background-color:#111;">
-        <p style="color:#FFFFFF;font-weight:bold">DIV1</P>
-    </div>
-    <input type="button" value="div2 상세보기" onclick="viewDiv(2)"/><br/>
-    <div class="div2" style="width:300px;height:30px;background-color:#222;">
-        <p style="color:#FFFFFF;font-weight:bold">DIV2</P>
-    </div>
-    <input type="button" value="div3 상세보기" onclick="viewDiv(3)"/><br/>
-    <div class="div3" style="width:300px;height:30px;background-color:#333;">
-        <p style="color:#FFFFFF;font-weight:bold">DIV3</P>
-    </div>
-</div>
+	<select name="selname2" id="sel2">
 
-{% endblock %}
+		<option value="">선택</option>
+
+		<option value="사과">사과</option>
+
+		<option value="배">배</option>
+
+		<option value="딸기">딸기</option>
+
+	</select>
+
+	<br/>
+
+	<input type="button" name="btn" id="btn2" value="Click">	
+
+</body>
+
+<script>
+
+$(document).ready(function() {
+
+	$('#btn2').click(function() {
+
+		alert($('#sel2 option:selected').val());
+
+	});
+
+});
+
+</script>
+
+
+
+출처: https://skymin2.tistory.com/25 [생계형 개발자]
