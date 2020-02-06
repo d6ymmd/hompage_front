@@ -23,18 +23,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
     <!--    css- 추후 별도 분리-->
     <style>
-        body {
+        /* body {
             background-color: rgb(44, 62, 82);
-        }
+        } */
 
         .navbar {
             background-color: rgba(37, 204, 160);
         }
 
         .nav-link,
-        .navbar-logo, a {
+        .navbar-logo,
+        a {
             color: black;
         }
 
@@ -50,7 +53,11 @@
             margin-right: 30px;
         }
 
-        
+        scroll-container {
+            display: block;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
     </style>
 
 
@@ -66,42 +73,52 @@
             </a>
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#page-1">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Activitiy</a>
+                    <a class="nav-link" href="#page-2">Activitiy</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
+                    <a class="nav-link" href="#page-3">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#page-4">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Board</a>
                 </li>
             </ul>
         </nav>
+
+
+
+
+
     </header>
     {% block content %}
-
     <main>
-        {% include 'about.html' %}
-        {% include 'activity.html' %}
-        {% include 'portfolio.html' %}
+        <scroll-container>
+            <scroll-page id="page-1"></scroll-page>
+            {% include 'about.html' %}
+            <scroll-page id="page-2"></scroll-page>
+            {% include 'activity.html' %}
+            <scroll-page id="page-3"></scroll-page>
+            {% include 'portfolio.html' %}
+
     </main>
     {% endblock %}
     <footer>
+        <scroll-page id="page-4"></scroll-page>
         <div class="contact">
 
             <a href="https://www.facebook.com/p.rogramming3k/">
                 <i class="fab fa-facebook fa-5x"></i>
             </a>
             <a href="">
-            <i class="fas fa-envelope fa-5x"></i>
+                <i class="fas fa-envelope fa-5x"></i>
             </a>
             <a href="">
-            <i class="fas fa-mobile-alt fa-5x"></i>
+                <i class="fas fa-mobile-alt fa-5x"></i>
             </a>
         </div>
         <footer class="container-fluid d-flex flex-column justify-content-center">
@@ -112,6 +129,7 @@
                 서울특별시 관악구 관악로 1, 서울대학교 벤처경영 교육 및 연구 동아리
             </div>
         </footer>
+        </scroll-container>
         <footer>
 </body>
 

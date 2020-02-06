@@ -1,3 +1,5 @@
+{% load static %}
+
 <style>
     @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
 
@@ -125,7 +127,7 @@
         transition-delay: 0.35s;
     }
     .activity-info {
-        color:white;
+        /* color:white; */
         text-align:center;
         padding: 30px;
     }
@@ -146,8 +148,7 @@
         <div class="row justify-content-center">
             <div class="activity-01 col">
                 <figure class="snip1200">
-                    <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                        alt="">
+                    <img src="{% static "img/week1.jpeg" %}" width="100px" height="100px" alt="" />
                     <figcaption>
                         <p>HTML/CSS를 배웁니다</p>
                         <div class="heading">
@@ -158,8 +159,7 @@
             </div>
             <div class="activity-02 col">
                 <figure class="snip1200">
-                    <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                        alt="">
+                    <img src="{% static "img/week2.jpeg" %}" width="100px" height="100px" alt="" />
                     <figcaption>
                         <p>python을 배웁니다</p>
                         <div class="heading">
@@ -170,8 +170,7 @@
             </div>
             <div class="activity-03 col">
                 <figure class="snip1200">
-                    <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                        alt="">
+                    <img src="{% static "img/django.jpeg" %}" width="100px" height="100px" alt="" />
                     <figcaption>
                         <p>장고를 배웁니다</p>
                         <div class="heading">
@@ -182,8 +181,7 @@
             </div>
             <div class="activity-04 col">
                 <figure class="snip1200">
-                    <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                        alt="">
+                    <img src="{% static "img/projects.jpeg" %}" width="100px" height="100px" alt="" />
                     <figcaption>
                         <p>팀프로젝트를 합니다</p>
                         <div class="heading">

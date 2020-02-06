@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .portfolio-container {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .portfolio-header {
+        background-color: rgba(37, 204, 160);
+        padding: 10px;
+        text-align: end;
+    }
+
+    .portfolio-main {
+        padding: 20px;
+    }
+
+    .dropdown-toggle {
+        background-color: white;
+    }
+
+    .jumbotron {
+        background-color: white;
+    }
+
+    .btn-link{
+        color: black;
+    }
+</style>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">포트폴리오</h1>
+        <p class="lead">피로그래밍에서 작업한 프로젝트에 대한 내용을 확인 할 수 있습니다.</p>
+    </div>
+</div>
+<div class="portfolio-container">
+    <div class="portfolio-header">
+        <select class="old-select">
+            <option value="0">기수 선택</option>
+            <option value="1">1기</option>
+            <option value="2">2기</option>
+            <option value="3">3기</option>
+            <option value="4">4기</option>
+        </select>
+    </div>
+    <div class="portfolio-main">
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            피로그래밍 홈페이지
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="..." class="card-img" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional
+                                        content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            KAGGLE
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="..." class="card-img" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional
+                                        content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            레오야 밥먹자
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="..." class="card-img" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional
+                                        content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
