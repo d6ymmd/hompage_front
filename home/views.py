@@ -13,5 +13,5 @@ def portfolio_list(request):
 def portfolio_list2(request):
     return render(request, 'home/portfolio_list2.html')
 
-def portfolio_list3(request):
-    return render(request, 'home/portfolio_list3.html')
+def jsscript(request):
+    return render(request, 'home/jsscript.html')
