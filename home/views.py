@@ -8,10 +8,7 @@ def notice_list(request):
     return render(request, 'home/notice_list.html')
 
 def portfolio_list(request):
-    return render(request, 'home/portfolio_list.html')
-
-def portfolio_list2(request):
     return render(request, 'home/portfolio_list2.html')
 
-def jsscript(request):
-    return render(request, 'home/jsscript.html')
+def portfolio_practice(request):
+    return render(request, 'home/portfolio_practice.html')

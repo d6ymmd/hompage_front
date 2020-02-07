@@ -28,6 +28,24 @@
     .btn-link {
         color: black;
     }
+    .portfolio-header{
+        font-size: 17px;
+    }
+
+    select{
+        width:150px;
+        height:30px;
+    }
+/* 
+    h2 {
+        display:inline;
+    } */
+
+    /* .fas{
+        text
+    } */
+
+
 </style>
 
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -88,13 +106,16 @@
     <div class="portfolio-main">
         <div class="accordion div1" id="accordionExample">
             <div class="card">
-                <div class="card-header" id="headingOne">
+                <div class="card-header" id="headingOne" onclick="">
                     <h2 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                            aria-expanded="true" aria-controls="collapseOne">
-                            피로그래밍 홈페이지
+                            aria-expanded="false" aria-controls="collapseOne">
+                            피로그래밍 홈페이지 
+                            <!-- <button class="btn btn-link fas fa-plus fa-xs" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="false" aria-controls="collapseOne"> -->
                         </button>
                     </h2>
+     
                 </div>
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                     data-parent="#accordionExample">
@@ -181,15 +202,15 @@
         </div>
         <div class="accordion div2" id="accordionExample">
             <div class="card">
-                <div class="card-header" id="headingOne">
+                <div class="card-header" id="headingFour">
                     <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                            aria-expanded="true" aria-controls="collapseOne">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseFour">
                             피로그래밍 홈페이지(2기)
                         </button>
                     </h2>
                 </div>
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                <div id="collapseFour" class="collapse show" aria-labelledby="headingFour"
                     data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
@@ -212,15 +233,15 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-header" id="headingTwo">
+                <div class="card-header" id="headingFive">
                     <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            KAGGLE
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            KAGGLE(2기)
                         </button>
                     </h2>
                 </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
                             <div class="col-md-4">
@@ -242,15 +263,15 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-header" id="headingThree">
+                <div class="card-header" id="headingSix">
                     <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            레오야 밥먹자
+                            data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            레오야 밥먹자(2기)
                         </button>
                     </h2>
                 </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
                             <div class="col-md-4">
@@ -274,15 +295,15 @@
         </div>
         <div class="accordion div3" id="accordionExample">
             <div class="card">
-                <div class="card-header" id="headingOne">
+                <div class="card-header" id="headingSeven">
                     <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                            aria-expanded="true" aria-controls="collapseOne">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven"
+                            aria-expanded="true" aria-controls="collapseSeven">
                             피로그래밍 홈페이지(3기)
                         </button>
                     </h2>
                 </div>
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven"
                     data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
@@ -305,15 +326,15 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-header" id="headingTwo">
+                <div class="card-header" id="headingEight">
                     <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            KAGGLE
+                            data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            KAGGLE(3기)
                         </button>
                     </h2>
                 </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
                             <div class="col-md-4">
@@ -335,15 +356,15 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-header" id="headingThree">
+                <div class="card-header" id="headingNine">
                     <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            레오야 밥먹자
+                            data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            레오야 밥먹자(3기)
                         </button>
                     </h2>
                 </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
                             <div class="col-md-4">
