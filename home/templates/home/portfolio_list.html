@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
     .portfolio-container {
         padding-top: 20px;
         padding-left: 20px;
@@ -25,10 +27,6 @@
         background-color: white;
     }
 
-    .btn-link {
-        color: black;
-    }
-
     .portfolio-header {
         font-size: 17px;
     }
@@ -38,20 +36,44 @@
         height: 30px;
     }
 
-    /* 
-    h2 {
-        display:inline;
-    } */
-
-    /* .fas{
-        text
-    } */
-
-
     .card-header {
-        text-align: start;
         font-size: 17px;
+    }
 
+    .card-header,
+    .card-header:hover,
+    .card-header:active {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        position: relative;
+        transition: 0.5s color ease;
+        text-decoration: none;
+    }
+
+    div.card-header:hover {
+        color: rgba(37, 204, 160);
+        font-weight: 900;
+    }
+
+    div.card-header:after {
+        content: "";
+        transition: 0.5s all ease;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+        bottom: 0em;
+        height: 3px;
+        width: 0;
+        background: rgba(37, 204, 160);
+        left: 0;
+    }
+
+    div.card-header:hover:after {
+        width: 100%;
+    }
+
+    .empty {
+        font-size: 0.2px;
     }
 </style>
 
@@ -59,11 +81,6 @@
 <script type="text/javascript">
 
     function viewDiv(idx) {
-        if (idx == 1) {
-            $(".div1").css("display", "none");
-            $(".div2").css("display", "none");
-            $(".div3").css("display", "none");
-        }
         if (idx == 1) {
             $(".div1").css("display", "");
             $(".div2").css("display", "none");
@@ -81,9 +98,9 @@
         }
 
         else {
-            $(".div1").css("display", "none");
-            $(".div2").css("display", "none");
-            $(".div3").css("display", "none");
+            $(".div1").css("display", "");
+            $(".div2").css("display", "");
+            $(".div3").css("display", "");
         }
     }
 
@@ -98,10 +115,15 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-3">포트폴리오</h1>
-        <p class="lead">피로그래밍에서 작업한 프로젝트에 대한 내용을 확인 할 수 있습니다.</p>
+        <p class="lead">피로그래밍에서 작업한 프로젝트에 대한 내용을 확인 할 수 있습니다.
+            <br>
+            아래에서 기수를 선택하여 각 기수에서 완성한 프로젝트를 확인해보세요!
+        </p>
     </div>
+
 </div>
 <div class="portfolio-container">
+
     <div class="portfolio-header">
         <select name="select" onchange="javascript:selectIndex(this)">
             <option value="0" selected>기수 선택</option>
@@ -113,11 +135,10 @@
     <div class="portfolio-main">
         <div class="accordion div1" id="accordionExample">
             <div class="card">
-                <button class="card-header btn btn-link" id="hedingOne" type="button" data-toggle="collapse"
-                    data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <div class="card-header" id="hedingOne" data-toggle="collapse" data-target="#collapseOne"
+                    aria-expanded="false" aria-controls="collapseOne">
                     피로그래밍 홈페이지
-                    <i class="fas fa-plus"></i>
-                </button>
+                </div>
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
@@ -140,10 +161,10 @@
                 </div>
             </div>
             <div class="card">
-                <button class="btn btn-link collapsed card-header" id="headingTwo" type="button" data-toggle="collapse"
-                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <div class="collapsed card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="false" aria-controls="collapseTwo">
                     KAGGLE
-                </button>
+                </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
@@ -166,10 +187,10 @@
                 </div>
             </div>
             <div class="card">
-                <button class="btn btn-link collapsed card-header" id="headingThree" type="button" data-toggle="collapse"
-                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <div class="collapsed card-header" id="headingThree" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="false" aria-controls="collapseThree">
                     레오야 밥먹자
-                </button>
+                </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
@@ -194,11 +215,10 @@
         </div>
         <div class="accordion div2" id="accordionExample">
             <div class="card">
-
-                <button class="btn btn-link card-header" id="headingFour" type="button" data-toggle="collapse"
-                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <div class="card-header" id="headingFour" data-toggle="collapse" data-target="#collapseFour"
+                    aria-expanded="false" aria-controls="collapseFour">
                     피로그래밍 홈페이지(2기)
-                </button>
+                </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
@@ -221,10 +241,10 @@
                 </div>
             </div>
             <div class="card">
-                <button class="btn btn-link collapsed card-header" id="headingFive" type="button" data-toggle="collapse"
-                    data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <div class="collapsed card-header" id="headingFive" data-toggle="collapse" data-target="#collapseFive"
+                    aria-expanded="false" aria-controls="collapseFive">
                     KAGGLE(2기)
-                </button>
+                </div>
                 <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
@@ -247,12 +267,10 @@
                 </div>
             </div>
             <div class="card">
-
-                <button class="btn btn-link collapsed card-header" id="headingSix" type="button" data-toggle="collapse"
-                    data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                <div class="collapsed card-header" id="headingSix" data-toggle="collapse" data-target="#collapseSix"
+                    aria-expanded="false" aria-controls="collapseSix">
                     레오야 밥먹자(2기)
-                </button>
-
+                </div>
                 <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
@@ -277,10 +295,10 @@
         </div>
         <div class="accordion div3" id="accordionExample">
             <div class="card">
-                <button class="btn btn-link card-header" id="headingSeven" type="button" data-toggle="collapse"
-                    data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                <div class="card-header" id="headingSeven" data-toggle="collapse" data-target="#collapseSeven"
+                    aria-expanded="true" aria-controls="collapseSeven">
                     피로그래밍 홈페이지(3기)
-                </button>
+                </div>
                 <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
@@ -303,12 +321,10 @@
                 </div>
             </div>
             <div class="card">
-                <button class="btn btn-link collapsed card-header" id="headingEight" type="button"
-                    data-toggle="collapse" data-target="#collapseEight" aria-expanded="false"
-                    aria-controls="collapseEight">
+                <div class="collapsed card-header" id="headingEight" data-toggle="collapse" data-target="#collapseEight"
+                    aria-expanded="false" aria-controls="collapseEight">
                     KAGGLE(3기)
-                </button>
-
+                </div>
                 <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
@@ -331,12 +347,10 @@
                 </div>
             </div>
             <div class="card">
-
-                <button class="btn btn-link collapsed card-header" id="headingNine" type="button" data-toggle="collapse"
-                    data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                <div class="collapsed card-header" id="headingNine" data-toggle="collapse" data-target="#collapseNine"
+                    aria-expanded="false" aria-controls="collapseNine">
                     레오야 밥먹자(3기)
-                </button>
-
+                </div>
                 <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="row no-gutters">
