@@ -66,30 +66,42 @@
 
 <body>
     <header>
-        <nav class="navbar">
-            <a class="navbar-logo" href="#">
-                <img src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/p960x960/75332821_2462692640645362_6889331996112191488_o.jpg?_nc_cat=103&_nc_ohc=6CDVuxBADCsAX8HRc5b&_nc_ht=scontent-ssn1-1.xx&_nc_tp=6&oh=97d0d42ab1e6658a115e06e2ac15f0f2&oe=5E91A851"
-                    width="30" height="30" alt="">
-            </a>
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link" href="#page-1">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#page-2">Activitiy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#page-3">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#page-4">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Board</a>
-                </li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-md navbar-dark" id="navbar">
+            <div class="navbar-header">
+                <a class="navbar-logo" href="#">
+                    <img src="#" alt="piro_logo">
+                </a>
+            </div>
 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" id="option1" href="#about">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#activity" id="option2">ACTIVITY </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#port" id="option3">PORTFOLIO </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="option4">RECRUITMENT </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#board" id="option5">BOARD </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="sign-up">
+                    <li class="nav-item"><a class="nav-link"><i class="fas fa-user"></i>SIGN UP</a></li>
+                    <li class="nav-item"><a class="nav-link"><i class="fas fa-sign-in-alt"></i>LOGIN</a></li>
+                </ul>
+            </div>
+        </nav>
 
 
 
@@ -107,30 +119,26 @@
 
     </main>
     {% endblock %}
-    <footer>
-        <scroll-page id="page-4"></scroll-page>
-        <div class="contact">
 
-            <a href="https://www.facebook.com/p.rogramming3k/">
-                <i class="fab fa-facebook fa-5x"></i>
-            </a>
-            <a href="">
-                <i class="fas fa-envelope fa-5x"></i>
-            </a>
-            <a href="">
-                <i class="fas fa-mobile-alt fa-5x"></i>
-            </a>
-        </div>
-        <footer class="container-fluid d-flex flex-column justify-content-center">
-            <div class="row d-flex justify-content-center">
-                &copy피로그래밍 | 회장 : 정성모
-            </div>
-            <div class="row mt-1 d-flex justify-content-center">
-                서울특별시 관악구 관악로 1, 서울대학교 벤처경영 교육 및 연구 동아리
-            </div>
-        </footer>
-        </scroll-container>
-        <footer>
 </body>
+<div id="foot">
+    <div class="footer-buffer"></div>
+    <div class="contact">
+        <a href="https://www.facebook.com/p.rogramming3k/" target="_blank">
+            <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="mailto:pirogramming@gmail.com">
+            <i class="fas fa-envelope fa-2x"></i>
+        </a>
+    </div>
+    <footer class="container-fluid  d-flex flex-column justify-content-center">
+        <div class="row d-flex justify-content-center">
+            &copy피로그래밍 | 회장 : 정성모 | 연락처: 010-1234-5678
+        </div>
+        <div class="row mt-1 d-flex justify-content-center" style="margin-bottom: 1%">
+            서울특별시 관악구 관악로 1, 서울대학교 벤처경영 교육 및 연구 동아리
+        </div>
+    </footer>
+</div>
 
 </html>

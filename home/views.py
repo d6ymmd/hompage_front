@@ -9,3 +9,9 @@ def notice_list(request):
 
 def portfolio_list(request):
     return render(request, 'home/portfolio_list.html')
+
+def photo_list(request):
+    return render(request, 'home/photo.html')
+
+def address(request):
+    return render(request, 'home/address.html')

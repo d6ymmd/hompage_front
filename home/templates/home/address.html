@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<!-- 기수별로 조회가능할 수 있도록 구현
+
+상세프로필 페이지 넣어서 해당 사람이 코멘트같은것 남길 수 있도록?
+(강의하시는 분들이나 소통 원하시는 분들이 있을 수 있으니까)
+애매한것? 프로젝트명/github주소 ::::: 이건 상세프로필에 들어가서 볼 수있게?
+-> 근데 게시판으로 대체할 수도 있을 듯? 
+개인의 상세 프로필과 다른사람 상세프로필이 다를 수도 있다.
+
+기수별 선택기능은 포트폴리오랑 다르게 해야함 처음화면에는 그냥 이미지나 텍스트 넣어놓고 
+선택하면 상세 페이지를 볼 수 있도록  -->
+
+<style>
+    .address-header {
+        padding: 50px 30px 30px 30px;
+    }
+
+    .thead, tr {
+        text-align: center;
+    }
+
+    .address-table {
+        padding: 30px;
+    }
+    
+    .profile-img{
+        width:20px;
+        height:20px;
+        border-radius: 50%;
+    }
+
+
+</style>
+
+<div class="member-address">
+    <div class="address-header">
+        <h3>멤버 주소록</h3>
+        <p>피로그래밍 참여 회원 주소록입니다.</p>
+    </div>
+    <div class="address-table">
+        <table class="table">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">기수</th>
+                    <th scope="col">회원정보</th>
+                    <th scope="col">연락처</th>
+                    <th scope="col">직업</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12기</td>
+                    <td>
+                        <span class='img'><img class="profile-img" src="https://www.w3schools.com/w3css/img_avatar3.png" alt="">
+                        </span>
+                        <span class='name'>&nbsp;김땡땡</span>
+                    </td>
+                    <td class='contact'>
+                        <p class='phone'><i class="fas fa-mobile-alt"></i>010-0000-0000</p>
+                        <p class='e-mail'><i class="fas fa-at"></i>01234@gmail.com</p>
+                    </td>
+                    <td>백엔드 개발자</td>
+                </tr>
+                <tr>
+                    <td>11기</td>
+                    <td>
+                        <span class='img'><img class="profile-img" src="https://www.w3schools.com/w3css/img_avatar3.png" alt="">
+                        </span>
+                        <span class='name'>&nbsp;박땡땡</span>
+                    </td>
+                    <td>010-0000-0000</td>
+                    <td>프론트 개발자</td>
+                </tr>
+                <tr>
+                    <td>10기</td>
+                    <td>
+                        <span class='img'><img class="profile-img" src="https://www.w3schools.com/w3css/img_avatar3.png" alt="">
+                        </span>
+                        <span class='name'> &nbsp;윤땡땡</span>
+                    </td>
+                    <td>010-0000-0000</td>
+                    <td>Product Manager</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+{% endblock %}
