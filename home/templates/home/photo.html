@@ -1,10 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
-<!-- 동아리 활동내역
-운영진만 올릴수있게(백)
-사진첩처럼 보이게
-/사진첩에 댓글 기능 넣을 것인가? 일단 3주?? -->
+<style>
+    .photo-container {
+        padding: 30px;
+    }
+
+    .img-thumbnail {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+    }
+
+    .photo-content {
+        text-align: center;
+    }
+/* 
+    .photo-wrap{
+        width:40
+    } */
+
+</style>
 
 <!-- 사진첩처럼 할거면 그 javascript hover효과 사진에 하던거 찾아보기 -->
 
@@ -14,5 +31,27 @@
 
 <!-- 썸네일 위에 그림자 같은거 넣고. 피로그래밍 12기 워크샵처럼 제목, 몇개의 사진이 있는지
 (페이스북처럼) -->
+<div class="photo-container">
+    <div class="photo-header">
+        <h3>피로그래밍 활동</h3>
+        <p>주차별 활동을 사진으로 확인하세요!</p>
+        <div class="photo-content">
+            <!-- 나중에 for문 -->
+            <div class="photo-wrap">
+                <div class="photo"><img src="{% static "img/study-meeting.jpg" %}" alt="..." class="img-thumbnail">
+                </div>
+                <div class="photo-text">
+                    <p>피로그래밍 12기 1주차 활동</p>
+                    <p>총 n개의 콘텐츠</p>
+                </div>
+            </div>
+            <img src="{% static "img/lecture.jpg" %}" alt="..." class="img-thumbnail">
+
+            <img src="{% static "img/study.jpeg" %}"" alt=" ..." class="img-thumbnail">
+
+            <img src="{% static "img/teamproject.jpg" %}"" alt=" ..." class="img-thumbnail">
+        </div>
+    </div>
+</div>
 
 {% endblock %}
