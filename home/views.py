@@ -15,3 +15,7 @@ def photo_list(request):
 
 def address(request):
     return render(request, 'home/address.html')
+
+
+def practice(request):
+    return render(request, 'home/practice.html')
