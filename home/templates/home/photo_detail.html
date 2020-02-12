@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+
+<style>
+    .photo-content {
+        padding: 30px;
+    }
+
+    .photo-header {
+        padding: 50px 30px 30px 30px;
+        background-image: url("{% static "img/polaroid.png" %}");
+        background-position: top center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: rgb(249, 249, 249);
+        height: 200px;
+        opacity: 0.7;
+        color: black;
+    }
+</style>
+
+
+<script language="JavaScript">
+    funtion img(myimg){
+        if(myimg==1) my.src='img/lecture.jpg';
+        if(myimg==2) my.src='img/projects.jpeg';
+        if(myimg==3) my.src='img/study-meeting.jpg';
+        if(myimg==4) my.src='img/study.jpeg';
+        if(myimg==5) my.src='img/teamproject.jpg';
+        if(myimg==6) my.src='img/lecture.jpg';
+        if(myimg==7) my.src='img/projects.jpeg';
+        if(myimg==8) my.src='img/study-meeting.jpg';
+        if(myimg==9) my.src='img/study.jpeg';
+        if(myimg==10) my.src='img/teamproject.jpg';
+    }
+</script>
+
+
+    <div class="container">
+        <div class="photo-header">
+            <h3>피로그래밍 활동</h3>
+            <p>주차별 활동을 사진으로 확인하세요!</p>
+        </div>
+        <div class="photo-content">
+            <div class="photo-wrap">
+                <img src="img/lecture.jpg" onMouseOver="img(1)" style="cursor:hand" alt="" width="105" height="94">
+                <img src="img/projects.jpeg" onMouseOver="img(2)" style="cursor:hand" alt="" width="105" height="94">
+                <img src="img/study-meeting.jpg" onMouseOver="img(3)" style="cursor:hand" alt="" width="105" height="94">
+                <img src="img/study.jpeg" onMouseOver="img(4)" style="cursor:hand" alt="" width="105" height="94">
+                <img src="img/teamproject.jpg" onMouseOver="img(5)" style="cursor:hand" alt="" width="105" height="94">
+                <br />
+                <img src="img/lecutre.jpg" width="550" height="400" name="my" alt=""><br />
+                <img src="img/lecture.jpg" onMouseOver="img(6)" style="cursor:hand" alt="" width="105" height="94">
+                <img src="img/projects.jpeg" onMouseOver="img(7)" style="cursor:hand" alt="" width="105" height="94">
+                <img src="img/study-meeting.jpg" onMouseOver="img(8)" style="cursor:hand" alt="" width="105" height="94">
+                <img src="iimg/study.jpeg" onMouseOver="img(9)" style="cursor:hand" alt="" width="105" height="94">
+                <img src="img/teamproject.jpg" onMouseOver="img(10)" style="cursor:hand" alt="" width="105" height="94">
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

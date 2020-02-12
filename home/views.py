@@ -19,3 +19,7 @@ def address(request):
 
 def practice(request):
     return render(request, 'home/practice.html')
+
+
+def photo_detail(request):
+    return render(request, 'home/photo_detail.html')

@@ -13,6 +13,7 @@ urlpatterns = [
     path('photo/', views.photo_list, name='photo_list'),
     path('address/', views.address, name='address'),
     path('practice/', views.practice, name='practice'),
+    path('photo/detail/', views.photo_detail, name='photo-detail'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
