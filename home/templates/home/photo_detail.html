@@ -4,11 +4,11 @@
 {% load static %}
 
 <style>
-    .photo-content {
+    .album-content {
         padding: 30px;
     }
 
-    .photo-header {
+    .album-header {
         padding: 50px 30px 30px 30px;
         background-image: url("{% static "img/polaroid.png" %}");
         background-position: top center;
@@ -19,47 +19,69 @@
         opacity: 0.7;
         color: black;
     }
+
+    img{
+    background:#000; 
+    border:solid #fff;
+    border-width:6px 6px 40px 6px;
+    box-shadow:1px 1px 5px #333; 
+    -webkit-box-shadow:1px 1px 5px #333;
+    -moz-box-shadow:1px 1px 5px #333;
+    height:250px;
+    width:200px; 
+    margin: 10px;
+}
+
+    .album-footer{
+        text-align: end;
+    }
+
+    .photo-wrap{
+        text-align: center;
+    }
+
 </style>
 
 
-<script language="JavaScript">
-    funtion img(myimg){
-        if(myimg==1) my.src='img/lecture.jpg';
-        if(myimg==2) my.src='img/projects.jpeg';
-        if(myimg==3) my.src='img/study-meeting.jpg';
-        if(myimg==4) my.src='img/study.jpeg';
-        if(myimg==5) my.src='img/teamproject.jpg';
-        if(myimg==6) my.src='img/lecture.jpg';
-        if(myimg==7) my.src='img/projects.jpeg';
-        if(myimg==8) my.src='img/study-meeting.jpg';
-        if(myimg==9) my.src='img/study.jpeg';
-        if(myimg==10) my.src='img/teamproject.jpg';
-    }
-</script>
+<!-- <script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" /> -->
 
 
-    <div class="container">
-        <div class="photo-header">
-            <h3>피로그래밍 활동</h3>
-            <p>주차별 활동을 사진으로 확인하세요!</p>
+<div class="container">
+    <div class="album-header">
+        <h3>피로그래밍 활동</h3>
+        <p>주차별 활동을 사진으로 확인하세요!</p>
+    </div>
+    <div class="album-content">
+        <div class="album-title">
+            <hr>
+            <p>앨범제목</p>
+            <hr>
+            <p>작성일자</p>
+            <hr>
+            <p>상세설명 및 기타내용</p>
+            <hr>
         </div>
-        <div class="photo-content">
-            <div class="photo-wrap">
-                <img src="img/lecture.jpg" onMouseOver="img(1)" style="cursor:hand" alt="" width="105" height="94">
-                <img src="img/projects.jpeg" onMouseOver="img(2)" style="cursor:hand" alt="" width="105" height="94">
-                <img src="img/study-meeting.jpg" onMouseOver="img(3)" style="cursor:hand" alt="" width="105" height="94">
-                <img src="img/study.jpeg" onMouseOver="img(4)" style="cursor:hand" alt="" width="105" height="94">
-                <img src="img/teamproject.jpg" onMouseOver="img(5)" style="cursor:hand" alt="" width="105" height="94">
-                <br />
-                <img src="img/lecutre.jpg" width="550" height="400" name="my" alt=""><br />
-                <img src="img/lecture.jpg" onMouseOver="img(6)" style="cursor:hand" alt="" width="105" height="94">
-                <img src="img/projects.jpeg" onMouseOver="img(7)" style="cursor:hand" alt="" width="105" height="94">
-                <img src="img/study-meeting.jpg" onMouseOver="img(8)" style="cursor:hand" alt="" width="105" height="94">
-                <img src="iimg/study.jpeg" onMouseOver="img(9)" style="cursor:hand" alt="" width="105" height="94">
-                <img src="img/teamproject.jpg" onMouseOver="img(10)" style="cursor:hand" alt="" width="105" height="94">
+        <div class="photo-wrap">
+            <img src="{% static "img/lecture.jpg" %}" alt="">
+            <img src="{% static "img/study-meeting.jpg" %}" alt="">
+            <img src="{% static "img/study.jpeg" %}" alt="">
+            <img src="{% static "img/teamproject.jpg" %}" alt="">
+            <img src="{% static "img/lecture.jpg" %}" alt="">
+            <img src="{% static "img/study-meeting.jpg" %}" alt="">
+            <img src="{% static "img/study.jpeg" %}" alt="">
+            <img src="{% static "img/teamproject.jpg" %}" alt="">
 
-            </div>
         </div>
     </div>
+    <hr>
+    <div class="album-footer">
+        <a href="#" class="btn btn-outline-secondary">목록으로</a>
+    </div>
+    <hr>
+</div>
 
 {% endblock %}
