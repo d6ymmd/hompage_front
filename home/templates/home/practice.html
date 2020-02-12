@@ -93,10 +93,14 @@
 
     .photo-header {
         padding: 50px 30px 30px 30px;
-        /* background-image: url("img/polaroid.jpg");
-        background-position: 100% 100%;
-        background-repeat: no-repeat; */
-
+        background-image: url("{% static "img/polaroid.png" %}");
+        background-position: top center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 200px;
+        opacity: 0.7;
+        color: black;
+        background-color: #F9F9F9;
     }
 
     .photo-content {
