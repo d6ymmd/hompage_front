@@ -16,10 +16,11 @@ def photo_list(request):
 def address(request):
     return render(request, 'home/address.html')
 
-
 def practice(request):
     return render(request, 'home/practice.html')
 
-
 def photo_detail(request):
     return render(request, 'home/photo_detail.html')
+
+def photo_detail2(request):
+    return render(request, 'home/photo_detail2.html')

@@ -18,6 +18,8 @@ urlpatterns = [
     path('photo/detail/', views.photo_detail, name='photo-detail'),
     # 데이터 넣은 후
     # path('photo/<int:pk>/', views.photo_detail, name='photo-detail'),
+    # 폴라로이드 다른버전_연습
+    path('photo/detail2/', views.photo_detail2, name='photo-detail2'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

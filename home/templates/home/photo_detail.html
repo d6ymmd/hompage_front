@@ -3,6 +3,9 @@
 
 {% load static %}
 
+<link rel="stylesheet" href="{% static "css/lightbox.css" %}">
+
+
 <style>
     .album-content {
         padding: 30px;
@@ -20,34 +23,66 @@
         color: black;
     }
 
-    img{
-    background:#000; 
-    border:solid #fff;
-    border-width:6px 6px 40px 6px;
-    box-shadow:1px 1px 5px #333; 
-    -webkit-box-shadow:1px 1px 5px #333;
-    -moz-box-shadow:1px 1px 5px #333;
-    height:250px;
-    width:200px; 
-    margin: 10px;
-}
+    .photo-set {
+        background: #000;
+        border: solid #fff;
+        border-width: 6px 6px 40px 6px;
+        box-shadow: 1px 1px 5px #333;
+        -webkit-box-shadow: 1px 1px 5px #333;
+        -moz-box-shadow: 1px 1px 5px #333;
+        height: 250px;
+        width: 200px;
+        margin: 10px;
+    }
 
-    .album-footer{
+    .photo {
+        height: 400px;
+        width: 400px;
+
+    }
+
+    .album-footer {
         text-align: end;
     }
 
-    .photo-wrap{
+    .photo-wrap {
         text-align: center;
     }
 
+    figure:before {
+        /*see the support section below to more info on using the :before psuedo element*/
+        content: '';
+        display: block;
+        position: absolute;
+        left: 5px;
+        /*postion from the left side of the frame (positive value move the tape right, negative moves it left)*/
+        top: -15px;
+        /*position from the top of the frame (positive move it above the frame, negative below)*/
+        width: 75px;
+        /*width of the tape*/
+        height: 25px;
+        /*height of the tape*/
+        background-color: rgba(222, 220, 198, 0.7);
+        /*colour of the tape, use rgba to make it slightly transparent*/
+        /*rotate the tape 12 degrees anti-clockwise*/
+        -webkit-transform: rotate(-12deg);
+        -moz-transform: rotate(-12deg);
+        -o-transform: rotate(-12deg);
+        -ms-transform: rotate(-12deg);
+    }
+
+    /**The tape for the even numbered images needs to be rotated the opposite way, as the images are, and positioned on the other side of the frame, I've also changed the width slightly**/
+    figure:nth-child(even):before {
+        left: 150px;
+        top: -15px;
+        width: 55px;
+        height: 25px;
+        -webkit-transform: rotate(12deg);
+        -moz-transform: rotate(12deg);
+        -o-transform: rotate(12deg);
+        -ms-transform: rotate(12deg);
+    }
 </style>
-
-
-<!-- <script type="text/javascript" src="js/prototype.js"></script>
-<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
-<script type="text/javascript" src="js/lightbox.js"></script>
-
-<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" /> -->
 
 
 <div class="container">
@@ -66,15 +101,33 @@
             <hr>
         </div>
         <div class="photo-wrap">
-            <img src="{% static "img/lecture.jpg" %}" alt="">
-            <img src="{% static "img/study-meeting.jpg" %}" alt="">
-            <img src="{% static "img/study.jpeg" %}" alt="">
-            <img src="{% static "img/teamproject.jpg" %}" alt="">
-            <img src="{% static "img/lecture.jpg" %}" alt="">
-            <img src="{% static "img/study-meeting.jpg" %}" alt="">
-            <img src="{% static "img/study.jpeg" %}" alt="">
-            <img src="{% static "img/teamproject.jpg" %}" alt="">
-
+            <a class="photo" href="{% static "img/lecture.jpg" %}" data-lightbox="roadtrip" data-title="피로그래밍 활동사진입니다.">
+                <img class="photo-set" src="{% static "img/lecture.jpg" %}" alt="" />
+            </a>
+            <a class="photo" href="{% static "img/study-meeting.jpg" %}" data-lightbox="roadtrip"
+                data-title="화목토 정규모임을 갖습니다.">
+                <img class="photo-set" src="{% static "img/study-meeting.jpg" %}" alt="" />
+            </a>
+            <a class="photo" href="{% static "img/study.jpeg" %}" data-lightbox="roadtrip"
+                data-title="활동은 선배기수의 강의와 스터디로 이루어집니다.">
+                <img class="photo-set" src="{% static "img/study.jpeg" %}" alt="" />
+            </a>
+            <a class="photo" href="{% static "img/teamproject.jpg" %}" data-lightbox="roadtrip" data-title="기타내용">
+                <img class="photo-set" src="{% static "img/teamproject.jpg" %}" alt="" />
+            </a>
+            <a class="photo" href="{% static "img/lecture.jpg" %}" data-lightbox="roadtrip" data-title="lightbox2">
+                <img class="photo-set" src="{% static "img/lecture.jpg" %}" alt="" />
+            </a>
+            <a class="photo" href="{% static "img/study-meeting.jpg" %}" data-lightbox="roadtrip"
+                data-title="피로그래밍 홈페이지">
+                <img class="photo-set" src="{% static "img/study-meeting.jpg" %}" alt="" />
+            </a>
+            <a class="photo" href="{% static "img/study.jpeg" %}" data-lightbox="roadtrip" data-title="이에이에오">
+                <img class="photo-set" src="{% static "img/study.jpeg" %}" alt="" />
+            </a>
+            <a class="photo" href="{% static "img/teamproject.jpg" %}" data-lightbox="roadtrip" data-title="마지막 사진입니다.">
+                <img class="photo-set" src="{% static "img/teamproject.jpg" %}" alt="" />
+            </a>
         </div>
     </div>
     <hr>
@@ -83,5 +136,15 @@
     </div>
     <hr>
 </div>
+
+
+<script src="{% static "js/lightbox-plus-jquery.js" %}"></script>
+<script>
+    lightbox.option({
+        'alwaysShowNavOnTouchDevices': true,
+        'maxWidth': 600,
+        'maxHeight': 600,
+    })
+</script>
 
 {% endblock %}
