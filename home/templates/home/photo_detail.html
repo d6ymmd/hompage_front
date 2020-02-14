@@ -4,23 +4,52 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static "css/lightbox.css" %}">
-
+<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Yeon+Sung&display=swap&subset=korean" rel="stylesheet">
 
 <style>
-    .album-content {
-        padding: 30px;
+ 
+    .album-header {
+        padding: 0;
+        margin: 0;
+        background-color:rgb(241, 241, 240);
+        height: 400px;
+        color: black;
+        text-align:end;
+        font-size: 100px;
+        font-family: 'Nanum Myeongjo', serif;
+        font-weight: bold;
     }
 
-    .album-header {
-        padding: 50px 30px 30px 30px;
-        background-image: url("{% static "img/polaroid.png" %}");
-        background-position: top center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: rgb(249, 249, 249);
+    .album-content {
+        padding: 20px 20px 80px 20px;
+    }
+
+    img {
         height: 200px;
-        opacity: 0.7;
-        color: black;
+        width: 200px;
+    }
+    
+    .photo-wrap{
+        text-align: center;
+    }
+
+    .album-footer {
+        text-align: end;
+        padding-bottom: 30px;
+    }
+
+    .album-title{
+        font-family: 'Yeon Sung', cursive;
+        font-size: 40px;
+        letter-spacing: 3px;
+        text-decoration: underline;
+    }
+
+    .album-date {
+        text-align: end;
+        font-family: 'Yeon Sung', cursive;
+        font-size: 20px;
+        letter-spacing: 3px;
     }
 
     .photo-set {
@@ -33,108 +62,119 @@
         height: 250px;
         width: 200px;
         margin: 10px;
+        float: left;
     }
 
-    .photo {
-        height: 400px;
-        width: 400px;
-
+    #polaroid {
+        width: 100%;
+        overflow: hidden;
     }
 
-    .album-footer {
-        text-align: end;
-    }
-
-    .photo-wrap {
-        text-align: center;
-    }
-
-    figure:before {
-        /*see the support section below to more info on using the :before psuedo element*/
-        content: '';
+    #polaroid figure {
+        float: left;
+        position: relative;
+        width: 200px;
+        margin: 10px 10px;
         display: block;
-        position: absolute;
-        left: 5px;
-        /*postion from the left side of the frame (positive value move the tape right, negative moves it left)*/
-        top: -15px;
-        /*position from the top of the frame (positive move it above the frame, negative below)*/
-        width: 75px;
-        /*width of the tape*/
-        height: 25px;
-        /*height of the tape*/
-        background-color: rgba(222, 220, 198, 0.7);
-        /*colour of the tape, use rgba to make it slightly transparent*/
-        /*rotate the tape 12 degrees anti-clockwise*/
-        -webkit-transform: rotate(-12deg);
-        -moz-transform: rotate(-12deg);
-        -o-transform: rotate(-12deg);
-        -ms-transform: rotate(-12deg);
     }
 
-    /**The tape for the even numbered images needs to be rotated the opposite way, as the images are, and positioned on the other side of the frame, I've also changed the width slightly**/
-    figure:nth-child(even):before {
-        left: 150px;
-        top: -15px;
-        width: 55px;
-        height: 25px;
-        -webkit-transform: rotate(12deg);
-        -moz-transform: rotate(12deg);
-        -o-transform: rotate(12deg);
-        -ms-transform: rotate(12deg);
+    #polaroid figure {
+        -webkit-transform: rotate(-1deg);
+        -moz-transform: rotate(-1deg);
+        -o-transform: rotate(-1deg);
+        -ms-transform: rotate(-1deg);
+        transform: rotate(-1deg);
+        -webkit-backface-visibility: hidden;
+    }
+
+    #polaroid figure:nth-child(even) {
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -o-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+        transform: rotate(2deg);
     }
 </style>
 
 
-<div class="container">
+<div class="album-container">
     <div class="album-header">
-        <h3>피로그래밍 활동</h3>
-        <p>주차별 활동을 사진으로 확인하세요!</p>
+        <p>PHOTO &nbsp;</p>
     </div>
     <div class="album-content">
-        <div class="album-title">
-            <hr>
-            <p>앨범제목</p>
-            <hr>
-            <p>작성일자</p>
-            <hr>
-            <p>상세설명 및 기타내용</p>
-            <hr>
-        </div>
-        <div class="photo-wrap">
-            <a class="photo" href="{% static "img/lecture.jpg" %}" data-lightbox="roadtrip" data-title="피로그래밍 활동사진입니다.">
-                <img class="photo-set" src="{% static "img/lecture.jpg" %}" alt="" />
-            </a>
-            <a class="photo" href="{% static "img/study-meeting.jpg" %}" data-lightbox="roadtrip"
-                data-title="화목토 정규모임을 갖습니다.">
-                <img class="photo-set" src="{% static "img/study-meeting.jpg" %}" alt="" />
-            </a>
-            <a class="photo" href="{% static "img/study.jpeg" %}" data-lightbox="roadtrip"
-                data-title="활동은 선배기수의 강의와 스터디로 이루어집니다.">
-                <img class="photo-set" src="{% static "img/study.jpeg" %}" alt="" />
-            </a>
-            <a class="photo" href="{% static "img/teamproject.jpg" %}" data-lightbox="roadtrip" data-title="기타내용">
-                <img class="photo-set" src="{% static "img/teamproject.jpg" %}" alt="" />
-            </a>
-            <a class="photo" href="{% static "img/lecture.jpg" %}" data-lightbox="roadtrip" data-title="lightbox2">
-                <img class="photo-set" src="{% static "img/lecture.jpg" %}" alt="" />
-            </a>
-            <a class="photo" href="{% static "img/study-meeting.jpg" %}" data-lightbox="roadtrip"
-                data-title="피로그래밍 홈페이지">
-                <img class="photo-set" src="{% static "img/study-meeting.jpg" %}" alt="" />
-            </a>
-            <a class="photo" href="{% static "img/study.jpeg" %}" data-lightbox="roadtrip" data-title="이에이에오">
-                <img class="photo-set" src="{% static "img/study.jpeg" %}" alt="" />
-            </a>
-            <a class="photo" href="{% static "img/teamproject.jpg" %}" data-lightbox="roadtrip" data-title="마지막 사진입니다.">
-                <img class="photo-set" src="{% static "img/teamproject.jpg" %}" alt="" />
-            </a>
-        </div>
+        <table class="table table-borderless">
+            <thead>
+                <tr class="album-title">
+                    <td>피로그래밍 3주차 활동</td>
+                </tr>
+                <tr class="album-date">
+                    <td>2020.01.16.</td>
+                </tr>
+            </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="photo-wrap" id="polaroid">
+                        <figure>
+                            <a class="photo" href="{% static "img/lecture.jpg" %}" data-lightbox="roadtrip"
+                                data-title="피로그래밍 활동사진입니다.">
+                                <img class="photo-set" src="{% static "img/lecture.jpg" %}" alt="" />
+                            </a>
+                        </figure>
+                        <figure>
+                            <a class="photo" href="{% static "img/study-meeting.jpg" %}" data-lightbox="roadtrip"
+                                data-title="화목토 정규모임을 갖습니다.">
+                                <img class="photo-set" src="{% static "img/study-meeting.jpg" %}" alt="" />
+                            </a>
+                        </figure>
+                        <figure>
+                            <a class="photo" href="{% static "img/study.jpeg" %}" data-lightbox="roadtrip"
+                                data-title="활동은 선배기수의 강의와 스터디로 이루어집니다.">
+                                <img class="photo-set" src="{% static "img/study.jpeg" %}" alt="" />
+                            </a>
+                        </figure>
+                        <figure>
+                            <a class="photo" href="{% static "img/teamproject.jpg" %}" data-lightbox="roadtrip"
+                                data-title="기타내용">
+                                <img class="photo-set" src="{% static "img/teamproject.jpg" %}" alt="" />
+                            </a>
+                        </figure>
+                        <figure>
+                            <a class="photo" href="{% static "img/lecture.jpg" %}" data-lightbox="roadtrip"
+                                data-title="lightbox2">
+                                <img class="photo-set" src="{% static "img/lecture.jpg" %}" alt="" />
+                            </a>
+                        </figure>
+
+                        <figure>
+                            <a class="photo" href="{% static "img/study-meeting.jpg" %}" data-lightbox="roadtrip"
+                                data-title="피로그래밍 홈페이지">
+                                <img class="photo-set" src="{% static "img/study-meeting.jpg" %}" alt="" />
+                            </a>
+                        </figure>
+                        <figure>
+                            <a class="photo" href="{% static "img/study.jpeg" %}" data-lightbox="roadtrip"
+                                data-title="이에이에오">
+                                <img class="photo-set" src="{% static "img/study.jpeg" %}" alt="" />
+                            </a>
+                        </figure>
+                        <figure>
+                            <a class="photo" href="{% static "img/teamproject.jpg" %}" data-lightbox="roadtrip"
+                                data-title="마지막 사진입니다.">
+                                <img class="photo-set" src="{% static "img/teamproject.jpg" %}" alt="" />
+                            </a>
+                        </figure>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot class="album-footer">
+            <tr>
+                <td><a href="#" class="btn btn-outline-secondary">목록으로</a></td>
+            </tr>
+        </tfoot>
+        </table>
     </div>
-    <hr>
-    <div class="album-footer">
-        <a href="#" class="btn btn-outline-secondary">목록으로</a>
-    </div>
-    <hr>
 </div>
 
 

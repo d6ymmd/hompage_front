@@ -17,6 +17,9 @@
         float: left;
     }
 
+    .photo-content {
+        padding: 30px;
+    }
 
 
     figure.snip1432 * {
@@ -102,12 +105,6 @@
         color: black;
         background-color: #F9F9F9;
     }
-
-    .photo-content {
-        padding: 30px;
-    }
-
-
 </style>
 
 <div class="photo-container">
@@ -116,46 +113,44 @@
         <p>주차별 활동을 사진으로 확인하세요!</p>
     </div>
     <div class="photo-content">
+        <figure class="snip1432">
+            <img src="{% static "img/study-meeting.jpg" %}" alt="...">
+            <figcaption>
+                <div>
+                    <h3></h3>
+                    <h3>더 많은 사진 보기</h3>
+                </div>
+                <div>
+                    <p>album-title(사진 n개)</p>
+                </div>
+            </figcaption>
+        </figure>
+        <figure class="snip1432">
+            <img src="{% static "img/study.jpeg" %}"" alt=" ...">
+            <figcaption>
+                <div>
+                    <h3></h3>
+                    <h3>더 많은 사진 보기</h3>
+                </div>
+                <div>
+                    <p>album-title(사진 n개)</p>
+                </div>
+            </figcaption>
+        </figure>
+        <figure class="snip1432">
+            <img src="{% static "img/lecture.jpg" %}" alt="...">
+            <figcaption>
+                <div>
+                    <h3></h3>
+                    <h3>더 많은 사진 보기</h3>
+                </div>
+                <div>
+                    <p>album-title(사진 n개)</p>
+                </div>
+            </figcaption>
+        </figure>
 
-            <figure class="snip1432">
-                <img src="{% static "img/study-meeting.jpg" %}" alt="...">
-                <figcaption>
-                    <div>
-                        <h3></h3>
-                        <h3>더 많은 사진 보기</h3>
-                    </div>
-                    <div>
-                        <p>album-title(사진 n개)</p>
-                    </div>
-                </figcaption>
-            </figure>
-
-
-            <figure class="snip1432">
-                <img src="{% static "img/study.jpeg" %}"" alt=" ...">
-                <figcaption>
-                    <div>
-                        <h3></h3>
-                        <h3>더 많은 사진 보기</h3>
-                    </div>
-                    <div>
-                        <p>album-title(사진 n개)</p>
-                    </div>
-                </figcaption>
-            </figure>
-
-            <figure class="snip1432">
-                <img src="{% static "img/lecture.jpg" %}" alt="...">
-                <figcaption>
-                    <div>
-                        <h3></h3>
-                        <h3>더 많은 사진 보기</h3>
-                    </div>
-                    <div>
-                        <p>album-title(사진 n개)</p>
-                    </div>
-                </figcaption>
-            </figure>
+        <div style="clear:both;"></div>
 
     </div>
 </div>

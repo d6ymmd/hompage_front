@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static "css/lightbox.css" %}">
+
+<style>
+    .album-content {
+        padding: 30px;
+    }
+
+    .album-header {
+        padding: 50px 30px 30px 30px;
+        background-image: url("{% static "img/polaroid.png" %}");
+        background-position: top center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: rgb(249, 249, 249);
+        height: 200px;
+        opacity: 0.7;
+        color: black;
+    }
+
+    .album-title {
+        text-align: center;
+        background-color: rgba(37, 204, 160, 0.3);
+    }
+
+    .album-date {
+        text-align: end;
+    }
+
+    .photo-set {
+        height: 250px;
+        width: 200px;
+    }
+
+    .album-footer {
+        text-align: end;
+    }
+
+    figure,
+    figcaption {
+        display: block;
+    }
+
+    #polaroid {
+        padding: 20px 10px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #polaroid figure {
+        float: left;
+        position: relative;
+        width: 215px;
+        margin: 10px 20px;
+        padding: 6px 8px 10px 8px;
+        background: #eee6d8;
+        background: -webkit-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+        background: -moz-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+        background: -o-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+        background: -ms-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+        background: linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+        -webkit-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+        -moz-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+        box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    }
+
+    #polaroid figure {
+        -webkit-transform: rotate(-1deg);
+        -moz-transform: rotate(-1deg);
+        -o-transform: rotate(-1deg);
+        -ms-transform: rotate(-1deg);
+        transform: rotate(-1deg);
+        -webkit-backface-visibility: hidden;
+    }
+
+    #polaroid figure:nth-child(even) {
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -o-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+        transform: rotate(2deg);
+        -webkit-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+        -moz-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+        box-shadow: -4px 4px 8px -4px rgba(0, 0, 0, .75);
+    }
+
+    #polaroid figcaption {
+        text-align: right;
+        font-family: 'Reenie Beanie', cursive;
+        font-size: 20px;
+        color: balck;
+    }
+
+    figure:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 5px;
+        top: -15px;
+        width: 75px;
+        height: 25px;
+        background-color: rgba(222, 220, 198, 0.7);
+        -webkit-transform: rotate(-12deg);
+        -moz-transform: rotate(-12deg);
+        -o-transform: rotate(-12deg);
+        -ms-transform: rotate(-12deg);
+    }
+
+    figure:nth-child(even):before {
+        left: 150px;
+        top: -15px;
+        width: 55px;
+        height: 25px;
+        -webkit-transform: rotate(12deg);
+        -moz-transform: rotate(12deg);
+        -o-transform: rotate(12deg);
+        -ms-transform: rotate(12deg);
+    }
+</style>
+
+<div class="container">
+    <div class="album-header">
+        <h3>피로그래밍 활동</h3>
+        <p>주차별 활동을 사진으로 확인하세요!</p>
+    </div>
+    <div class="album-content">
+        <table class="table">
+            <thead>
+                <tr class="album-title">
+                    <td>피로그래밍 3주차 활동</td>
+                </tr>
+                <tr class="album-date">
+                    <td>2020.01.16.</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="photo-wrap" id="polaroid">
+                            <figure>
+                                <a class="photo" href="{% static "img/lecture.jpg" %}" data-lightbox="roadtrip"
+                                    data-title="피로그래밍 활동사진입니다.">
+                                    <img class="photo-set" src="{% static "img/lecture.jpg" %}" alt="" />
+                                </a>
+                                <figcaption>#1
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <a class="photo" href="{% static "img/study-meeting.jpg" %}" data-lightbox="roadtrip"
+                                    data-title="화목토 정규모임을 갖습니다.">
+                                    <img class="photo-set" src="{% static "img/study-meeting.jpg" %}" alt="" />
+                                </a>
+                                <figcaption>#2
+                                </figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="photo" href="{% static "img/study.jpeg" %}" data-lightbox="roadtrip"
+                                    data-title="활동은 선배기수의 강의와 스터디로 이루어집니다.">
+                                    <img class="photo-set" src="{% static "img/study.jpeg" %}" alt="" />
+                                </a>
+                                <figcaption>#3
+                                </figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="photo" href="{% static "img/teamproject.jpg" %}" data-lightbox="roadtrip"
+                                    data-title="기타내용">
+                                    <img class="photo-set" src="{% static "img/teamproject.jpg" %}" alt="" />
+                                </a>
+                                <figcaption>#4
+                                </figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="photo" href="{% static "img/lecture.jpg" %}" data-lightbox="roadtrip"
+                                    data-title="lightbox2">
+                                    <img class="photo-set" src="{% static "img/lecture.jpg" %}" alt="" />
+                                </a>
+                                <figcaption>#5
+                                </figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="photo" href="{% static "img/study-meeting.jpg" %}" data-lightbox="roadtrip"
+                                    data-title="피로그래밍 홈페이지">
+                                    <img class="photo-set" src="{% static "img/study-meeting.jpg" %}" alt="" />
+                                </a>
+                                <figcaption>#6
+                                </figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="photo" href="{% static "img/study.jpeg" %}" data-lightbox="roadtrip"
+                                    data-title="이에이에오">
+                                    <img class="photo-set" src="{% static "img/study.jpeg" %}" alt="" />
+                                </a>
+                                <figcaption>#7
+                                </figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="photo" href="{% static "img/teamproject.jpg" %}" data-lightbox="roadtrip"
+                                    data-title="마지막 사진입니다.">
+                                    <img class="photo-set" src="{% static "img/teamproject.jpg" %}" alt="" />
+                                </a>
+                                <figcaption>#8
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot class="album-footer">
+                <tr>
+                    <td><a href="#" class="btn btn-outline-secondary">목록으로</a></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</div>
+
+<script src="{% static "js/lightbox-plus-jquery.js" %}"></script>
+<script>
+    lightbox.option({
+        'alwaysShowNavOnTouchDevices': true,
+        'maxWidth': 600,
+        'maxHeight': 600,
+    })
+</script>
+
+{% endblock %}
